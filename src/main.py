@@ -8,7 +8,7 @@ def main(page: ft.Page):
     file_label = ft.Text("Aucun fichier sélectionné")
 
     # Fonction appelée quand on choisit un fichier
-    def pick_file_result(e: ft.FilePickerResultEvent):
+    def pick_file_result(e):
         if e.files:
             file_label.value = f"Fichier choisi: {e.files[0].name}"
         else:
